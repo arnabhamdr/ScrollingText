@@ -3,52 +3,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/article_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/design_default_color_on_primary"
-        android:padding="10dp"
-        android:text="@string/article_heading"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        android:textColor="#039BE5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/article_title"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
+
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/article_heading">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/article_subheading"
-        android:autoLink="web"
-        android:padding="@dimen/regular_padding"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-        android:text="@string/article_subheading"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/article"
-        android:lineSpacingExtra="5sp"
-        android:padding="@dimen/regular_padding"
-        android:text="@string/article_text1"/>
-     <Button
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:id="@+id/add_comment"
-         android:text="@string/add_comment"
-    />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/article_subheading"
+                android:layout_width="@dimen/subheading_width"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_subtitle"
+                android:textAppearance="@android:style/TextAppearance" />
+            <TextView
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingExtra="5sp"
+                android:text="@string/article_text" />
+        </LinearLayout>
     </ScrollView>
-
-
 </RelativeLayout>
